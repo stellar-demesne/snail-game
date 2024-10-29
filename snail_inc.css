@@ -1,0 +1,88 @@
+body {
+    background-color: #222;
+}
+#all-page {
+    display: grid;
+    min-width: 740px;
+    grid-template-columns: 5fr 1fr;
+    column-gap: 5vw;
+    margin: 60px;
+    margin-top: 10vh;
+    background-color: #aaa;
+    padding: 20px;
+}
+
+#guidance-pane {
+    margin-bottom: 2vh;
+    height: 5em;
+}
+#guidance {
+    height: 4em;
+    width: 30em;
+}
+
+#button-holder {
+    display:grid;
+}
+.saving-button {
+    min-height: 3em;
+}
+
+.action-pane {
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+}
+#eat-holder {
+    grid-column: 1;
+}
+#eat-amount {
+    display: inline;
+}
+#foodsupply {
+    display: inline;
+}
+#foodsupply-holder {
+    display: inline;
+}
+#move-amount {
+    display: inline;
+}
+#worldsize {
+    display: inline;
+}
+#worldsize-holder {
+    display: inline;
+}
+#platform-amount {
+    display: inline;
+}
+#platform-required {
+    display: inline;
+}
+#platform-required-holder {
+    display: inline;
+}
+
+.workbar {
+    width: 400px;
+    background-color: #222;
+    height: 1em;
+    grid-column: 1;
+}
+
+.progressbar {
+    width: 0%;
+    height: 1em;
+    background-color: #55f;
+}
+.progressbar.complete {
+    width: 100%;
+    background-color: #2e2;
+}
+
+.platform-location {
+    width: 5%;
+    height: 1em;
+    margin-left: 0%;
+    background-color: #950;
+}

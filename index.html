@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>A Snail Day</title>
+    <link rel="stylesheet" href="snail_inc.css">
+</head>
+<body>
+<div id="all-page">
+    <div id="guidance-pane">
+        <div id="guidance"></div>
+        <button type="button" id="first-guidance"onclick="change_guidance_first();update_guidance();"
+                                                 >|&lt;&lt;</button>
+        <button type="button" id="prev-guidance" onclick="change_guidance_prev(); update_guidance();"
+                                                 >&lt;</button>
+        <div id="guidance-page-display" style="display: inline"></div>
+        <button type="button" id="next-guidance" onclick="change_guidance_next(); update_guidance();"
+                                                 >&gt;</button>
+        <button type="button" id="last-guidance" onclick="change_guidance_last(); update_guidance();"
+                                                 >&gt;&gt;|</button>
+    </div>
+    <div id="button-holder">
+        <button type="button" class="saving-button" id="savebutton"  onclick="save_to_localStorage();"
+                                              >save progress</button>
+        <button type="button" class="saving-button" id="loadbutton"  onclick="load_from_localStorage();"
+                                              >load &amp; fast-forward</button>
+        <button type="button" class="saving-button" id="resetbutton" onclick="reset_state();"
+                                              >reset ALL progress!</button>
+    </div>
+    <div id="actions-pane">
+        <label for="act-none" id="none-holder">
+            <input type="radio" name="action_choice" id="act-none" autocomplete="off" checked>
+            <label for="act-none">No focus</label>
+        </label>
+        <div id="eat-pane" class="action-pane">
+            <label for="act-eat" id="eat-holder">
+                <input type="radio" name="action_choice" id="act-eat"  autocomplete="off">
+                <label for="act-eat">Eat</label>
+            </label>
+            <div id="eat-amount-display">Eats: </div>
+            <div id="eat-workbar" class="workbar"><div id="eat-progress" class="progressbar"></div></div>
+            <div id="eat-amounts-holder"><div id="eat-amount">0</div><div id="foodsupply-holder"> / <div id="foodsupply"></div></div></div>
+        </div>
+        <div id="move-pane" class="action-pane">
+            <label for="act-move" id="move-holder">
+                <input type="radio" name="action_choice" id="act-move" autocomplete="off">
+                <label for="act-move">Move</label>
+            </label>
+            <div id="move-amount-display">Moves: </div>
+            <div id="move-workbar" class="workbar"><div id="move-progress" class="progressbar"></div></div>
+            <div id="move-amounts-holder"><div id="move-amount">0</div><div id="worldsize-holder"> / <div id="worldsize">?</div></div></div>
+        </div>
+        <div id="find-food-pane" class="action-pane">
+            <div id="find-food-holder">
+                <div>Find Food</div>
+            </div>
+            <div id="find-food-amount-display">Fruits found: </div>
+            <div id="find-food-workbar" class="workbar"><div id="find-food-progress" class="progressbar"></div></div>
+            <div id="find-food-amount">0</div>
+        </div>
+        <div id="wood-pane" class="action-pane">
+            <label for="act-wood" id="wood-holder">
+                <input type="radio" name="action_choice" id="act-wood" autocomplete="off">
+                <label for="act-wood">Gather Wood</label>
+            </label>
+            <div id="wood-amount-display">Splinters: </div>
+            <div id="wood-workbar" class="workbar"><div id="wood-progress" class="progressbar"></div></div>
+            <div id="wood-amount">0</div>
+        </div>
+        <div id="platform-made-pane" class="action-pane">
+            <div id="platform-made-holder">
+                <div>Make Platform</div>
+            </div>
+            <div id="platform-made-workbar" class="workbar"><div id="platform-made-progress" class="progressbar"></div></div>
+        </div>
+        <div id="platform-moved-pane" class="action-pane">
+            <label for="act-platform" id="platform-holder">
+                <input type="radio" name="action_choice" id="act-platform" autocomplete="off">
+                <label for="act-platform">Move Platform</label>
+            </label>
+            <div id="platform-movements-holder"><div id="platform-amount">0</div>%</div>
+            <div id="platform-movement-workbar" class="workbar"><div id="platform-moved-visual" class="platform-location"></div></div>
+        </div>
+    </div>
+</div>
+    <script type="text/javascript" src="snail_inc.js"> </script>
+</body>
+</html>
